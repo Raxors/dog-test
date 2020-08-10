@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_list">
+
+    <fragment
+        android:id="@+id/navigation_list"
+        android:name="com.raxors.dog_test.ui.fragments.DogListFragment"
+        android:label="@string/title_list"
+        tools:layout="@layout/fragment_dog_list" >
+        <action
+            android:id="@+id/action_navigation_list_to_navigation_subbreed_list"
+            app:destination="@id/navigation_subbreed_list" />
+        <action
+            android:id="@+id/action_navigation_list_to_navigation_image_list"
+            app:destination="@id/navigation_image_list" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favourites"
+        android:name="com.raxors.dog_test.ui.fragments.FavouriteListFragment"
+        android:label="@string/title_favourites"
+        tools:layout="@layout/fragment_favourites" >
+        <action
+            android:id="@+id/action_navigation_favourites_to_imageListFavouriteFragment"
+            app:destination="@id/imageListFavouriteFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_subbreed_list"
+        android:name="com.raxors.dog_test.ui.fragments.SubbreedsFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_subbreed_list" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_navigation_subbreed_list_to_navigation_image_list"
+            app:destination="@id/navigation_image_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_image_list"
+        android:name="com.raxors.dog_test.ui.fragments.ImageListFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_image_list" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageListFavouriteFragment"
+        android:name="com.raxors.dog_test.ui.fragments.ImageListFavouriteFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_image_list">
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

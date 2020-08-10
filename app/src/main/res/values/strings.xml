@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">dog-test</string>
+    <string name="title_list">Breeds</string>
+    <string name="title_favourites">Favourites</string>
+    <string name="action_share">Share</string>
+    <string name="dialog_error_title">Some Error!</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ok">OK</string>
+</resources>
